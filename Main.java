@@ -8,5 +8,11 @@ public class MyClass {
         
         Thread th2 = new Thread(hwp);
         th2.start();
+
+        for(int i = 1; i <= 100; i++) {
+            NumberPrinter np = new NumberPrinter(i);
+            Thread th = new Thread(np);
+            th.start();
+        }
     }
 }
